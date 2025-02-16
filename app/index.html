@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - GitHub Inspired</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-[#0d1117] text-gray-300">
+    <!-- Header -->
+    <header class="">
+        <div class="max-w-[1280px] mx-auto px-8 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold text-white">
+                <i class="fas fa-code"></i> Portfolio
+            </div>
+            
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="far fa-envelope"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="border-b border-gray-700">
+        <div class="max-w-[1280px] mx-auto px-8">
+            <ul class="flex space-x-8">
+                <li class="nav-item active py-3 border-b-2 border-[#f78166]">
+                    <a href="#" data-section="overview">Overview</a>
+                </li>
+                <li class="nav-item py-3">
+                    <a href="#" data-section="about">About <span class="text-gray-500">(28)</span></a>
+                </li>
+                <li class="nav-item py-3">
+                    <a href="#" data-section="repository">Projects <span class="text-gray-500">(8)</span></a>
+                </li>
+                <li class="nav-item py-3">
+                    <a href="#" data-section="skills">Skills <span class="text-gray-500">(5)</span></a>
+                </li>
+                <li class="nav-item py-3">
+                    <a href="#" data-section="stars">Stars <span class="text-gray-500">(142)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-[1280px] mx-auto px-8 py-8">
+        <div class="flex flex-wrap">
+            <!-- Left Column - Profile -->
+            <div class="w-full md:w-1/4 pr-8">
+                <!-- Profile Image -->
+                <div class="relative mb-4">
+                    <img src="../assets/shape1.png" alt="Profile" 
+                         class="rounded-full w-full border-4 border-[#21262d]">
+                    <div class="absolute bottom-0 right-0 bg-[#0d1117] p-1.5 rounded-full border-4 border-[#21262d]">
+                        <i class="far fa-smile text-xl text-yellow-400"></i>
+                    </div>
+                </div>
+
+                <!-- Profile Info -->
+                <div class="mb-6">
+                    <h1 class="text-2xl font-bold text-white mb-1">John Doe</h1>
+                    <p class="text-xl text-gray-400 mb-4">johndoe</p>
+                </div>
+
+                <!-- Bio -->
+                <div class="mb-6">
+                    <p class="text-gray-300 mb-4">
+                        Full Stack Developer passionate about creating innovative solutions.
+                        Building the future of web applications.
+                    </p>
+                    <button class="w-full py-1.5 px-4 bg-[#21262d] border border-gray-600 rounded-md hover:bg-[#30363d] text-sm font-medium">
+                        Edit profile
+                    </button>
+                </div>
+
+                <!-- Stats -->
+                <div class="mb-6">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="fas fa-users text-gray-500"></i>
+                        <span class="text-gray-300"><strong class="text-white">2.4k</strong> followers</span>
+                        <span class="text-gray-400">·</span>
+                        <span class="text-gray-300"><strong class="text-white">180</strong> following</span>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="space-y-2 text-sm">
+                    <div class="flex items-center">
+                        <i class="fas fa-building text-gray-500 w-5"></i>
+                        <span>@TechCorp</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-gray-500 w-5"></i>
+                        <span>San Francisco, CA</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-link text-gray-500 w-5"></i>
+                        <a href="#" class="text-blue-400 hover:underline">portfolio.dev</a>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fab fa-twitter text-gray-500 w-5"></i>
+                        <a href="#" class="text-blue-400 hover:underline">@johndoe</a>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="mt-6 pt-6 border-t border-gray-700">
+                    <h2 class="text-sm font-semibold text-white mb-2">Achievements</h2>
+                    <div class="flex flex-wrap gap-1">
+                        <img src="https://via.placeholder.com/64" alt="Achievement" class="w-16 h-16 rounded-full border-2 border-[#21262d]">
+                        <img src="https://via.placeholder.com/64" alt="Achievement" class="w-16 h-16 rounded-full border-2 border-[#21262d]">
+                        <img src="https://via.placeholder.com/64" alt="Achievement" class="w-16 h-16 rounded-full border-2 border-[#21262d]">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Content -->
+            <div class="w-full md:w-3/4">
+                <!-- Overview Section -->
+                <div id="overview-content" class="content-section">
+                    <!-- Pinned Repositories -->
+                    <div class="mb-8">
+                        <h2 class="text-base font-semibold text-white mb-2">Pinned</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Repository Card -->
+                            <div class="p-4 bg-[#0d1117] border border-gray-700 rounded-md hover:border-gray-500">
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center">
+                                        <i class="far fa-bookmark text-[#f78166] mr-2"></i>
+                                        <a href="#" class="text-blue-400 hover:underline font-semibold">awesome-project</a>
+                                    </div>
+                                    <span class="text-xs text-gray-500 border border-gray-700 rounded px-2">Public</span>
+                                </div>
+                                <p class="text-sm text-gray-400 mb-4">A revolutionary web application built with React and Node.js</p>
+                                <div class="flex items-center text-xs text-gray-400">
+                                    <span class="mr-4"><i class="fas fa-circle text-yellow-500 text-[10px] mr-1"></i>JavaScript</span>
+                                    <span class="mr-4"><i class="far fa-star mr-1"></i>128</span>
+                                    <span><i class="far fa-code-branch mr-1"></i>38</span>
+                                </div>
+                            </div>
+                            <!-- More Repository Cards -->
+                        </div>
+                    </div>
+
+                    <!-- Contribution Activity -->
+                    <div class="border-t border-gray-700 pt-6">
+                        <h2 class="text-base font-semibold text-white mb-4">Contribution Activity</h2>
+                        <!-- Activity Timeline -->
+                        <div class="space-y-4">
+                            <div class="flex">
+                                <div class="mr-3">
+                                    <i class="fas fa-code-branch text-green-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm">
+                                        <span class="text-blue-400 hover:underline">Created a pull request</span> in
+                                        <a href="#" class="text-blue-400 hover:underline">awesome-project</a>
+                                    </p>
+                                    <p class="text-xs text-gray-500">2 days ago</p>
+                                </div>
+                            </div>
+                            <!-- More Activity Items -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repository Section -->
+                <div id="repository-content" class="content-section hidden">
+                    <div class="mb-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <input type="text" placeholder="Find a repository..." 
+                                   class="w-64 px-3 py-1.5 bg-[#0d1117] border border-gray-700 rounded-md focus:outline-none focus:border-[#f78166]">
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-1.5 bg-[#21262d] border border-gray-600 rounded-md hover:bg-[#30363d]">
+                                    Type <i class="fas fa-caret-down ml-1"></i>
+                                </button>
+                                <button class="px-3 py-1.5 bg-[#21262d] border border-gray-600 rounded-md hover:bg-[#30363d]">
+                                    Language <i class="fas fa-caret-down ml-1"></i>
+                                </button>
+                                <button class="px-3 py-1.5 bg-[#21262d] border border-gray-600 rounded-md hover:bg-[#30363d]">
+                                    Sort <i class="fas fa-caret-down ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Repository List -->
+                        <div class="space-y-4">
+                            <div class="p-4 border-b border-gray-700">
+                                <div class="flex items-center justify-between mb-2">
+                                    <div>
+                                        <a href="#" class="text-blue-400 hover:underline font-semibold text-xl">project-one</a>
+                                        <span class="ml-2 text-xs text-gray-500 border border-gray-700 rounded px-2">Public</span>
+                                    </div>
+                                    <button class="px-3 py-1 bg-[#21262d] border border-gray-600 rounded-md hover:bg-[#30363d]">
+                                        <i class="far fa-star mr-1"></i> Star
+                                    </button>
+                                </div>
+                                <p class="text-sm text-gray-400 mb-3">Advanced web application with real-time features</p>
+                                <div class="flex items-center text-xs text-gray-400">
+                                    <span class="mr-4"><i class="fas fa-circle text-yellow-500 text-[10px] mr-1"></i>JavaScript</span>
+                                    <span class="mr-4">Updated 3 days ago</span>
+                                </div>
+                            </div>
+                            <!-- More repository items... -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div id="skills-content" class="content-section hidden">
+                    <div class="mb-6">
+                        <div class="flex items-center gap-3 mb-6">
+                            <h2 class="text-2xl font-bold text-white">Technical Skills</h2>
+                            <span class="px-3 py-1 text-sm bg-[#388bfd26] text-[#388bfd] rounded-full">Professional</span>
+                        </div>
+                        
+                        <!-- Frontend -->
+                        <div class="mb-8">
+                            <div class="flex items-center gap-2 mb-4">
+                                <i class="fas fa-code text-[#f78166]"></i>
+                                <h3 class="text-lg font-semibold text-white">Frontend Development</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <div class="bg-[#161b22] p-4 rounded-lg border border-gray-700 hover:border-[#f78166] transition-colors duration-300">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fab fa-react text-[#61dafb] text-xl"></i>
+                                        <span class="text-white font-medium">React.js</span>
+                                    </div>
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm text-gray-400">Advanced</span>
+                                        <span class="text-[#f78166]">90%</span>
+                                    </div>
+                                    <div class="w-full bg-[#21262d] rounded-full h-2.5">
+                                        <div class="bg-gradient-to-r from-[#f78166] to-[#ff9b83] h-2.5 rounded-full transition-all duration-500" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="bg-[#161b22] p-4 rounded-lg border border-gray-700 hover:border-[#f78166] transition-colors duration-300">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fab fa-vuejs text-[#42b883] text-xl"></i>
+                                        <span class="text-white font-medium">Vue.js</span>
+                                    </div>
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm text-gray-400">Advanced</span>
+                                        <span class="text-[#f78166]">85%</span>
+                                    </div>
+                                    <div class="w-full bg-[#21262d] rounded-full h-2.5">
+                                        <div class="bg-gradient-to-r from-[#f78166] to-[#ff9b83] h-2.5 rounded-full transition-all duration-500" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="bg-[#161b22] p-4 rounded-lg border border-gray-700 hover:border-[#f78166] transition-colors duration-300">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fab fa-css3-alt text-[#38bdf8] text-xl"></i>
+                                        <span class="text-white font-medium">Tailwind CSS</span>
+                                    </div>
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm text-gray-400">Expert</span>
+                                        <span class="text-[#f78166]">95%</span>
+                                    </div>
+                                    <div class="w-full bg-[#21262d] rounded-full h-2.5">
+                                        <div class="bg-gradient-to-r from-[#f78166] to-[#ff9b83] h-2.5 rounded-full transition-all duration-500" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Backend -->
+                        <div class="mb-8">
+                            <div class="flex items-center gap-2 mb-4">
+                                <i class="fas fa-server text-[#f78166]"></i>
+                                <h3 class="text-lg font-semibold text-white">Backend Development</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <div class="bg-[#161b22] p-4 rounded-lg border border-gray-700 hover:border-[#f78166] transition-colors duration-300">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fab fa-node-js text-[#68a063] text-xl"></i>
+                                        <span class="text-white font-medium">Node.js</span>
+                                    </div>
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm text-gray-400">Advanced</span>
+                                        <span class="text-[#f78166]">88%</span>
+                                    </div>
+                                    <div class="w-full bg-[#21262d] rounded-full h-2.5">
+                                        <div class="bg-gradient-to-r from-[#f78166] to-[#ff9b83] h-2.5 rounded-full transition-all duration-500" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                                <div class="bg-[#161b22] p-4 rounded-lg border border-gray-700 hover:border-[#f78166] transition-colors duration-300">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fab fa-python text-[#ffd43b] text-xl"></i>
+                                        <span class="text-white font-medium">Python</span>
+                                    </div>
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm text-gray-400">Advanced</span>
+                                        <span class="text-[#f78166]">82%</span>
+                                    </div>
+                                    <div class="w-full bg-[#21262d] rounded-full h-2.5">
+                                        <div class="bg-gradient-to-r from-[#f78166] to-[#ff9b83] h-2.5 rounded-full transition-all duration-500" style="width: 82%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Section -->
+                <div id="about-content" class="content-section hidden">
+                    <div class="bg-[#161b22] rounded-lg p-6">
+                        <h2 class="text-xl font-bold text-white mb-6">About Me</h2>
+                        <div class="space-y-4 text-gray-300">
+                            <p>👋 Hi there! I'm a passionate Full Stack Developer with 5+ years of experience in building web applications.</p>
+                            
+                            <div class="mt-6">
+                                <h3 class="text-lg font-semibold text-white mb-3">Work Experience</h3>
+                                <div class="space-y-4">
+                                    <div class="border-l-2 border-[#f78166] pl-4">
+                                        <h4 class="text-white font-medium">Senior Developer @ TechCorp</h4>
+                                        <p class="text-sm text-gray-400">2020 - Present</p>
+                                        <p class="mt-2">Leading development of enterprise web applications</p>
+                                    </div>
+                                    <div class="border-l-2 border-[#f78166] pl-4">
+                                        <h4 class="text-white font-medium">Full Stack Developer @ StartupX</h4>
+                                        <p class="text-sm text-gray-400">2018 - 2020</p>
+                                        <p class="mt-2">Developed and maintained multiple client projects</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6">
+                                <h3 class="text-lg font-semibold text-white mb-3">Education</h3>
+                                <div class="border-l-2 border-[#f78166] pl-4">
+                                    <h4 class="text-white font-medium">BSc in Computer Science</h4>
+                                    <p class="text-sm text-gray-400">Tech University, 2018</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Navigation handling
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Update navigation highlighting
+                document.querySelectorAll('.nav-item').forEach(navItem => {
+                    navItem.classList.remove('active', 'border-b-2', 'border-[#f78166]');
+                });
+                this.classList.add('active', 'border-b-2', 'border-[#f78166]');
+                
+                // Hide all content sections
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.add('hidden');
+                });
+            
+                // Show selected content section
+                const sectionId = this.querySelector('a').getAttribute('data-section');
+                const contentId = `${sectionId}-content`;
+                const contentSection = document.getElementById(contentId);
+                if (contentSection) {
+                    contentSection.classList.remove('hidden');
+                }
+            });
+        });
+
+        // Show overview content by default
+        document.getElementById('overview-content').classList.remove('hidden');
+    </script>
+</body>
+</html>
+
+</html>
