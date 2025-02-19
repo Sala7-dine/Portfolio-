@@ -279,8 +279,7 @@
                                 <p class="text-sm text-gray-400 mb-4">plateforme dédiée aux étudiants de YouCode pour faciliter la recherche de colocataires et de logements.</p>
                                 <div class="flex items-center text-xs text-gray-400">
                                     <span class="mr-4"><i class="fas fa-circle text-blue-500 text-[10px] mr-1"></i>Php</span>
-                                    <span class="mr-4"><i class="fas fa-circle text-green-500 text-[10px] mr-1"></i>APIRESTful</span>
-                                    <span class="mr-4"><i class="fas fa-circle text-indigo-500 text-[10px] mr-1"></i>Tailwind</span>
+                                    <span class="mr-4"><i class="fas fa-circle text-indigo-500 text-[10px] mr-1"></i>Tailwind Css</span>
                                     <span class="mr-4"><i class="fas fa-circle text-pink-500 text-[10px] mr-1"></i>Ajax</span>
                                     <span class="mr-4"><i class="fas fa-circle text-yellow-500 text-[10px] mr-1"></i>JavaScript</span>
                                     <span class="mr-4"><i class="fas fa-circle text-cyan-500 text-[10px] mr-1"></i>Mysql</span>
@@ -345,44 +344,131 @@
 
                 </div>
 
-                <!-- Repository Section -->
+                <!-- Projects Section -->
                 <div id="repository-content" class="content-section hidden">
-                    <div class="mb-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <input type="text" placeholder="Find a repository..." 
-                                   class="w-64 px-3 py-1.5 bg-[#0d1117] border border-gray-700 rounded-md focus:outline-none focus:border-[#f78166]">
-                            <div class="flex space-x-2">
-                                <button class="px-3 py-1.5 bg-[#21262d] border border-gray-600 rounded-md hover:bg-[#30363d]">
-                                    Type <i class="fas fa-caret-down ml-1"></i>
-                                </button>
-                                <button class="px-3 py-1.5 bg-[#21262d] border border-gray-600 rounded-md hover:bg-[#30363d]">
-                                    Language <i class="fas fa-caret-down ml-1"></i>
-                                </button>
-                                <button class="px-3 py-1.5 bg-[#21262d] border border-gray-600 rounded-md hover:bg-[#30363d]">
-                                    Sort <i class="fas fa-caret-down ml-1"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Repository List -->
-                        <div class="space-y-4">
-                            <div class="p-4 border-b border-gray-700">
-                                <div class="flex items-center justify-between mb-2">
-                                    <div>
-                                        <a href="#" class="text-blue-400 hover:underline font-semibold text-xl">project-one</a>
-                                        <span class="ml-2 text-xs text-gray-500 border border-gray-700 rounded px-2">Public</span>
+                    <div class="mb-14 ml-8 size-full">
+                        
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- RoomMate Project -->
+                            <div class="bg-[#161b22] border border-gray-700 rounded-lg overflow-hidden">
+                                <img src="https://t3.ftcdn.net/jpg/05/21/66/12/360_F_521661218_MNYc5lCrIQUKKwBfIGzxJYHYxZzwNof9.jpg" alt="RoomMate Project" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="text-xl font-semibold text-white">RoomMate</h3>
+                                        <a href="https://github.com/sala7-dine/RoomMate" target="_blank" 
+                                           class="text-gray-400 hover:text-white">
+                                            <i class="fab fa-github text-xl"></i>
+                                        </a>
                                     </div>
-                                    <button class="px-3 py-1 bg-[#21262d] border border-gray-600 rounded-md hover:bg-[#30363d]">
-                                        <i class="far fa-star mr-1"></i> Star
-                                    </button>
-                                </div>
-                                <p class="text-sm text-gray-400 mb-3">Advanced web application with real-time features</p>
-                                <div class="flex items-center text-xs text-gray-400">
-                                    <span class="mr-4"><i class="fas fa-circle text-yellow-500 text-[10px] mr-1"></i>JavaScript</span>
-                                    <span class="mr-4">Updated 3 days ago</span>
+                                    <p class="text-gray-400 mb-4">
+                                        Plateforme dédiée aux étudiants de YouCode pour faciliter la recherche 
+                                        de colocataires et de logements. Une solution pratique pour la gestion 
+                                        de colocation.
+                                    </p>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h4 class="text-sm font-medium text-[#f78166] mb-2">Technologies utilisées:</h4>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">PHP</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">Javascript</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">Tailwind CSS</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">AJAX</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">MySQL</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- More repository items... -->
+
+                            <!-- VeilleHub Project -->
+                            <div class="bg-[#161b22] border border-gray-700 rounded-lg overflow-hidden">
+                                <img src="https://t3.ftcdn.net/jpg/05/21/66/12/360_F_521661218_MNYc5lCrIQUKKwBfIGzxJYHYxZzwNof9.jpg" alt="VeilleHub Project" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="text-xl font-semibold text-white">VeilleHub</h3>
+                                        <a href="https://github.com/sala7-dine/VeilleHub" target="_blank" 
+                                           class="text-gray-400 hover:text-white">
+                                            <i class="fab fa-github text-xl"></i>
+                                        </a>
+                                    </div>
+                                    <p class="text-gray-400 mb-4">
+                                        Plateforme innovante conçue pour optimiser le rituel quotidien éducatif 
+                                        où les étudiants présentent des sujets. Facilite le partage de connaissances.
+                                    </p>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h4 class="text-sm font-medium text-[#f78166] mb-2">Technologies utilisées:</h4>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">PHP</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">Tailwind CSS</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">JavaScript</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">MySQL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TaskFlow Project -->
+                            <div class="bg-[#161b22] border border-gray-700 rounded-lg overflow-hidden">
+                                <img src="https://t3.ftcdn.net/jpg/05/21/66/12/360_F_521661218_MNYc5lCrIQUKKwBfIGzxJYHYxZzwNof9.jpg" alt="TaskFlow Project" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="text-xl font-semibold text-white">TaskFlow</h3>
+                                        <a href="https://github.com/sala7-dine/TaskFlow" target="_blank" 
+                                           class="text-gray-400 hover:text-white">
+                                            <i class="fab fa-github text-xl"></i>
+                                        </a>
+                                    </div>
+                                    <p class="text-gray-400 mb-4">
+                                        Application offrant une interface intuitive permettant aux utilisateurs 
+                                        de créer, gérer et visualiser leurs tâches de manière efficace.
+                                    </p>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h4 class="text-sm font-medium text-[#f78166] mb-2">Technologies utilisées:</h4>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">PHP</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">Tailwind CSS</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">JavaScript</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">MySQL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Portfolio Project -->
+                            <div class="bg-[#161b22] border border-gray-700 rounded-lg overflow-hidden">
+                                <img src="https://t3.ftcdn.net/jpg/05/21/66/12/360_F_521661218_MNYc5lCrIQUKKwBfIGzxJYHYxZzwNof9.jpg" alt="Portfolio Project" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <h3 class="text-xl font-semibold text-white">Portfolio</h3>
+                                        <a href="https://github.com/sala7-dine/portfolio" target="_blank" 
+                                           class="text-gray-400 hover:text-white">
+                                            <i class="fab fa-github text-xl"></i>
+                                        </a>
+                                    </div>
+                                    <p class="text-gray-400 mb-4">
+                                        Portfolio personnel inspiré du design GitHub, présentant mes projets, 
+                                        compétences et expériences de manière professionnelle et moderne.
+                                    </p>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h4 class="text-sm font-medium text-[#f78166] mb-2">Technologies utilisées:</h4>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">HTML</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">Tailwind CSS</span>
+                                                <span class="px-3 py-1 bg-[#21262d] rounded-md text-xs text-gray-300">JavaScript</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
