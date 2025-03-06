@@ -7,22 +7,75 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+<style>
+    .skill-filter-btn.active {
+        background-color: #f78166;
+        color: white;
+    }
+
+    .skill-card {
+        transition: all 0.3s ease;
+    }
+
+    .progress-bar {
+        transition: width 1s ease-out;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    .skill-card:hover .progress-bar {
+        animation: pulse 2s infinite;
+    }
+
+    /* Ajout d'animations pour les statistiques */
+    @keyframes countUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .stats-number {
+        animation: countUp 1s ease-out forwards;
+    }
+</style>
+
 <body class="bg-[#0d1117] text-gray-300">
     <!-- Header -->
     <header class="">
         <div class="max-w-[1280px] mx-auto px-8 py-3 flex justify-between items-center">
             <!-- Logo -->
-            <div class="text-2xl font-bold text-white">
-                <i class="fas fa-code"></i> SalaDd
+            <div class="flex justify-center items-center gap-4 text-lg font-bold text-white">
+                <a href="https://github.com/Sala7-dine" target="_blank" 
+                        class="text-gray-100 hover:text-white transition-colors">
+                        <i class="fab fa-github text-3xl"></i>
+                </a> 
+                <h2 class="text-gray-300 hover:underline hover:cursor-pointer">Sala7-dine</h2>
+                
             </div>
             
             <!-- Social Media Icons -->
-            <div class="flex space-x-4">
-                <a href="#" class="hover:text-white transition-colors text-xl"><i class="fab fa-github"></i></a>
-                <a href="#" class="hover:text-white transition-colors text-xl"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="hover:text-white transition-colors text-xl"><i class="far fa-envelope"></i></a>
-                <a href="#" class="hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-white transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+            <div class="py-2">
+                <div class="flex gap-2">
+                    <a href="https://github.com/sala7-dine" target="_blank" 
+                       class="w-8 h-8 bg-[#21262d] rounded-full flex items-center justify-center text-gray-400 hover:text-white">
+                        <i class="fab fa-github text-md"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/salahdine-daha" target="_blank" 
+                       class="w-8 h-8 bg-[#21262d] rounded-full flex items-center justify-center text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in text-md"></i>
+                    </a>
+                    <a href="https://twitter.com/salahdaha7" target="_blank" 
+                       class="w-8 h-8 bg-[#21262d] rounded-full flex items-center justify-center text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter text-md"></i>
+                    </a>
+                    <a href="https://instagram.com/salahdaha1" target="_blank" 
+                       class="w-8 h-8 bg-[#21262d] rounded-full flex items-center justify-center text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram text-md"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -40,25 +93,19 @@
                 <li class="nav-item py-3">
                     <a href="#" data-section="about" class="flex items-center gap-2">
                         <i class="fas fa-user text-gray-400 text-sm"></i>
-                        About <span class="text-gray-500">(28)</span>
+                        About <span class="text-gray-500">(8)</span>
                     </a>
                 </li>
                 <li class="nav-item py-3">
                     <a href="#" data-section="repository" class="flex items-center gap-2">
                         <i class="fas fa-code-branch text-gray-400 text-sm"></i>
-                        Projects <span class="text-gray-500">(8)</span>
+                        Projects <span class="text-gray-500">(20)</span>
                     </a>
                 </li>
                 <li class="nav-item py-3">
                     <a href="#" data-section="skills" class="flex items-center gap-2">
                         <i class="fas fa-laptop-code text-gray-400 text-sm"></i>
-                        Skills <span class="text-gray-500">(5)</span>
-                    </a>
-                </li>
-                <li class="nav-item py-3">
-                    <a href="#" data-section="stars" class="flex items-center gap-2">
-                        <i class="fas fa-star text-gray-400 text-sm"></i>
-                        Stars <span class="text-gray-500">(142)</span>
+                        Skills <span class="text-gray-500">(16)</span>
                     </a>
                 </li>
             </ul>
@@ -90,9 +137,11 @@
                     <p class="text-gray-300 mb-4">
                         Développeur Full-Stack | Youcode | UM6P | Technicien Spécialisé en Développement Digital💯
                     </p>
-                    <button class="w-full py-1.5 px-4 bg-[#21262d] border border-gray-600 rounded-md hover:bg-[#30363d] text-sm font-medium">
-                        Edit profile
-                    </button>
+                    
+                    <a href="https://github.com/sala7-dine" target="_blank" class="w-full block text-center py-1.5 px-4 bg-[#21262d] border border-gray-600 rounded-md hover:bg-[#30363d] text-sm font-medium">
+                        Follow
+                    </a>
+
                 </div>
 
                 <!-- Stats -->
@@ -117,33 +166,33 @@
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-link text-gray-500 w-5"></i>
-                        <a href="#" class="text-blue-400 hover:underline">GitHub</a>
+                        <a href="https://github.com/Sala7-dine" class="text-blue-400 hover:underline">&nbsp GitHub</a>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-link text-gray-500 w-5"></i>
-                        <a href="#" class="text-blue-400 hover:underline">Linkedin</a>
+                        <a href="https://www.linkedin.com/in/salahdinedaha/" class="text-blue-400 hover:underline">&nbsp Linkedin</a>
                     </div>
-                    <div class="flex items-center">
+                    <!-- <div class="flex items-center">
                         <i class="fab fa-twitter text-gray-500 w-5"></i>
                         <a href="#" class="text-blue-400 hover:underline">@johndoe</a>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Achievements -->
-                <div class="mt-6 pt-6 border-t border-gray-700">
+                <!-- <div class="mt-6 pt-6 border-t border-gray-700">
                     <h2 class="text-sm font-semibold text-white mb-2">Achievements</h2>
                     <div class="flex flex-wrap gap-1">
                         <img src="https://via.placeholder.com/64" alt="Achievement" class="w-16 h-16 rounded-full border-2 border-[#21262d]">
                         <img src="https://via.placeholder.com/64" alt="Achievement" class="w-16 h-16 rounded-full border-2 border-[#21262d]">
                         <img src="https://via.placeholder.com/64" alt="Achievement" class="w-16 h-16 rounded-full border-2 border-[#21262d]">
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- Right Column - Content -->
             <div class="w-full md:w-3/4">
                 <!-- Overview Section -->
-                <div id="overview-content" class="content-section hidden">
+                <div id="overview-content" class="content-section ">
                     <!-- Introduction -->
                     <div class="mb-8 rounded-lg p-8 border border-gray-700">
                         
@@ -275,7 +324,7 @@
                                 <div class="flex items-center justify-between mb-2">
                                     <div class="flex items-center">
                                         <i class="far fa-bookmark text-[#f78166] text-[14px] mr-2 mt-1"></i>
-                                        <a href="#" class="text-blue-400 hover:underline font-semibold">RoomMate</a>
+                                        <a href="https://github.com/Sala7-dine/RoomMate.git" class="text-blue-400 hover:underline font-semibold">RoomMate</a>
                                     </div>
                                     <span class="text-xs text-gray-500 border border-gray-700 rounded px-2">Public</span>
                                 </div>
@@ -293,7 +342,7 @@
                                 <div class="flex items-center justify-between mb-2">
                                     <div class="flex items-center">
                                         <i class="far fa-bookmark text-[#f78166] text-[14px] mr-2 mt-1"></i>
-                                        <a href="#" class="text-blue-400 hover:underline font-semibold">VeilleHub</a>
+                                        <a href="https://github.com/Sala7-dine/VeilleHub.git" class="text-blue-400 hover:underline font-semibold">VeilleHub</a>
                                     </div>
                                     <span class="text-xs text-gray-500 border border-gray-700 rounded px-2">Public</span>
                                 </div>
@@ -310,7 +359,7 @@
                                 <div class="flex items-center justify-between mb-2">
                                     <div class="flex items-center">
                                         <i class="far fa-bookmark text-[#f78166] text-[14px] mr-2 mt-1"></i>
-                                        <a href="#" class="text-blue-400 hover:underline font-semibold">Youdemy</a>
+                                        <a href="https://github.com/Sala7-dine/Youdemy.git" class="text-blue-400 hover:underline font-semibold">Youdemy</a>
                                     </div>
                                     <span class="text-xs text-gray-500 border border-gray-700 rounded px-2">Public</span>
                                 </div>
@@ -328,7 +377,7 @@
                                 <div class="flex items-center justify-between mb-2">
                                     <div class="flex items-center">
                                         <i class="far fa-bookmark text-[#f78166] text-[14px] mr-2 mt-1"></i>
-                                        <a href="#" class="text-blue-400 hover:underline font-semibold">TaskFlow</a>
+                                        <a href="https://github.com/Sala7-dine/TaskFlow.git" class="text-blue-400 hover:underline font-semibold">TaskFlow</a>
                                     </div>
                                     <span class="text-xs text-gray-500 border border-gray-700 rounded px-2">Public</span>
                                 </div>
@@ -348,7 +397,7 @@
                 </div>
 
                 <!-- Projects Section -->
-                <div id="repository-content" class="content-section">
+                <div id="repository-content" class="content-section hidden">
                     <div class="mb-14">
                         <!-- Section Header -->
                         <div class="flex items-center justify-between mb-8">
@@ -422,7 +471,7 @@
                                                     <i class="fas fa-code-branch mr-2"></i>6
                                                 </span>
                                             </div>
-                                            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                            <a href="https://github.com/Sala7-dine/RoomMate.git" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
                                                 Voir le projet <i class="fas fa-arrow-right ml-2"></i>
                                             </a>
                                         </div>
@@ -487,7 +536,7 @@
                                                     <i class="fas fa-code-branch mr-2"></i>6
                                                 </span>
                                             </div>
-                                            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                            <a href="https://github.com/sala7-dine/VeilleHub" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
                                                 Voir le projet <i class="fas fa-arrow-right ml-2"></i>
                                             </a>
                                         </div>
@@ -551,7 +600,7 @@
                                                     <i class="fas fa-code-branch mr-2"></i>4
                                                 </span>
                                             </div>
-                                            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                            <a href="https://github.com/Sala7-dine/Youdemy.git" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
                                                 Voir le projet <i class="fas fa-arrow-right ml-2"></i>
                                             </a>
                                         </div>
@@ -576,7 +625,7 @@
                                             <h3 class="text-xl font-semibold text-white group-hover:text-[#f78166] transition-colors">GameVault</h3>
                                             <p class="text-sm text-gray-400 mt-1">Collection de jeux vidéo</p>
                                         </div>
-                                        <a href="https://github.com/sala7-dine/portfolio" target="_blank" 
+                                        <a href="https://github.com/Sala7-dine/GameVault.git" target="_blank" 
                                            class="text-gray-400 hover:text-white transition-colors">
                                             <i class="fab fa-github text-xl"></i>
                                         </a>
@@ -611,7 +660,7 @@
                                                     <i class="fas fa-code-branch mr-2"></i>2
                                                 </span>
                                             </div>
-                                            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                            <a href="https://github.com/Sala7-dine/GameVault.git" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
                                                 Voir le projet <i class="fas fa-arrow-right ml-2"></i>
                                             </a>
                                         </div>
@@ -636,7 +685,7 @@
                                             <h3 class="text-xl font-semibold text-white group-hover:text-[#f78166] transition-colors">CodeQuize</h3>
                                             <p class="text-sm text-gray-400 mt-1">Quiz interactif</p>
                                         </div>
-                                        <a href="https://github.com/sala7-dine/portfolio" target="_blank" 
+                                        <a href="https://github.com/Sala7-dine/CodeQuiz.git" target="_blank" 
                                            class="text-gray-400 hover:text-white transition-colors">
                                             <i class="fab fa-github text-xl"></i>
                                         </a>
@@ -674,7 +723,7 @@
                                                     <i class="fas fa-code-branch mr-2"></i>1
                                                 </span>
                                             </div>
-                                            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                            <a href="https://github.com/Sala7-dine/CodeQuiz.git" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
                                                 Voir le projet <i class="fas fa-arrow-right ml-2"></i>
                                             </a>
                                         </div>
@@ -699,7 +748,7 @@
                                             <h3 class="text-xl font-semibold text-white group-hover:text-[#f78166] transition-colors">CineFlix</h3>
                                             <p class="text-sm text-gray-400 mt-1">Critiques de films</p>
                                         </div>
-                                        <a href="https://github.com/sala7-dine/portfolio" target="_blank" 
+                                        <a href="https://github.com/Sala7-dine/CineFlix.git" target="_blank" 
                                            class="text-gray-400 hover:text-white transition-colors">
                                             <i class="fab fa-github text-xl"></i>
                                         </a>
@@ -735,7 +784,7 @@
                                                     <i class="fas fa-code-branch mr-2"></i>1
                                                 </span>
                                             </div>
-                                            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                            <a href="https://github.com/Sala7-dine/CineFlix.git" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
                                                 Voir le projet <i class="fas fa-arrow-right ml-2"></i>
                                             </a>
                                         </div>
@@ -1310,99 +1359,10 @@
         </div>
     </main>
 
-    <script>
-        // Navigation handling
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Update navigation highlighting
-                document.querySelectorAll('.nav-item').forEach(navItem => {
-                    navItem.classList.remove('active', 'border-b-2', 'border-[#f78166]');
-                });
-                this.classList.add('active', 'border-b-2', 'border-[#f78166]');
-                
-                // Hide all content sections
-                document.querySelectorAll('.content-section').forEach(section => {
-                    section.classList.add('hidden');
-                });
-            
-                // Show selected content section
-                const sectionId = this.querySelector('a').getAttribute('data-section');
-                const contentId = `${sectionId}-content`;
-                const contentSection = document.getElementById(contentId);
-                if (contentSection) {
-                    contentSection.classList.remove('hidden');
-                }
-            });
-        });
+    
 
-       // document.getElementById('overview-content').classList.remove('hidden');
-    </script>
-
-    <style>
-        .skill-filter-btn.active {
-            background-color: #f78166;
-            color: white;
-        }
-
-        .skill-card {
-            transition: all 0.3s ease;
-        }
-
-        .progress-bar {
-            transition: width 1s ease-out;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .skill-card:hover .progress-bar {
-            animation: pulse 2s infinite;
-        }
-
-        /* Ajout d'animations pour les statistiques */
-        @keyframes countUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .stats-number {
-            animation: countUp 1s ease-out forwards;
-        }
-    </style>
-
-    <script>
-        // Code JavaScript existant pour l'animation des compétences
-        // Ajoutez ces nouvelles fonctions
-
-        function animateStats() {
-            const stats = document.querySelectorAll('.stats-number');
-            stats.forEach(stat => {
-                const target = parseInt(stat.getAttribute('data-target'));
-                let current = 0;
-                const increment = target / 50;
-                const timer = setInterval(() => {
-                    current += increment;
-                    stat.textContent = Math.floor(current);
-                    if (current >= target) {
-                        stat.textContent = target;
-                        clearInterval(timer);
-                    }
-                }, 20);
-            });
-        }
-
-        // Appelez cette fonction lorsque la section devient visible
-        document.addEventListener('DOMContentLoaded', () => {
-            if (document.querySelector('#skills-content').classList.contains('active')) {
-                animateStats();
-            }
-        });
-    </script>
+   
+   
                 
 
     <!-- Footer -->
@@ -1459,6 +1419,36 @@
         </div>
     </footer>
 
+
+    <script>
+        // Code JavaScript existant pour l'animation des compétences
+        // Ajoutez ces nouvelles fonctions
+
+        function animateStats() {
+            const stats = document.querySelectorAll('.stats-number');
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    stat.textContent = Math.floor(current);
+                    if (current >= target) {
+                        stat.textContent = target;
+                        clearInterval(timer);
+                    }
+                }, 20);
+            });
+        }
+
+        // Appelez cette fonction lorsque la section devient visible
+        document.addEventListener('DOMContentLoaded', () => {
+            if (document.querySelector('#skills-content').classList.contains('active')) {
+                animateStats();
+            }
+        });
+    </script>
+
     <script>
         // Navigation handling
         document.querySelectorAll('.nav-item').forEach(item => {
@@ -1486,8 +1476,10 @@
             });
         });
 
-       // document.getElementById('overview-content').classList.remove('hidden');
+       document.getElementById('overview-content').classList.remove('hidden');
     </script>
+
+
 
    
 </body>
